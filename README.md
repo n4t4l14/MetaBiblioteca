@@ -21,7 +21,7 @@
 composer install
 
 // Creación de archivo de entorno
-php -r "file_exist('.env') || copy('.env.example', '.env');"
+php -r "file_exists('.env') || copy('.env.example', '.env');"
 
 // Creación de key
 php artisan key:generate --ansi
