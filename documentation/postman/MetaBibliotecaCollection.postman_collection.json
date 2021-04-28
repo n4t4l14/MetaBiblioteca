@@ -1,0 +1,131 @@
+{
+	"info": {
+		"_postman_id": "e4f3348d-1270-4172-967c-3bad0228b627",
+		"name": "MetaBibliotecaCollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Crear ISBN",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{domain}}/api/books/create/{{ISBN}}",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"books",
+						"create",
+						"{{ISBN}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar por ISBN",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{domain}}/api/books/{{ISBN}}/delete",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"books",
+						"{{ISBN}}",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Libros",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{domain}}/api/books?page=1",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"books"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1",
+							"description": "indica la pagina que va a mostrar"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ver detalle libro XML",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{domain}}/api/books/{{ISBN}}",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"books",
+						"{{ISBN}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Inicio html",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}",
+					"host": [
+						"{{domain}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
